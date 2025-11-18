@@ -1,12 +1,20 @@
+from idlelib.configdialog import font_sample_text
+
 import streamlit as st
 import pandas as pd
 import io
 from openpyxl import load_workbook
 from openpyxl.styles import PatternFill
+from pydeck.bindings.map_styles import styles
 
 st.set_page_config(page_title="Excel Data Validation", page_icon="📊", layout="centered")
 st.image("vector.png", use_container_width=100)
-st.write("## Data Validation Tool")
+st.markdown(
+    """
+    <h2 style='font-family: Roboto, sans-serif;'>Data Validation Tool</h2>
+    """,
+    unsafe_allow_html=True
+)
 # col1, col2 = st.columns([1,3])
 # with col1:
 #     st.image("vector.png", use_container_width=200)
